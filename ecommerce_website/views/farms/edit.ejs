@@ -1,0 +1,12 @@
+<h2 class="section-title">Edit Member</h2>
+<form action="/farms/<%= farm.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+    <%- include('_form') %>
+    <%- include('../partials/errorMessage')%>
+    
+    
+    <div class="btn-edit">
+        <button class="btn btn-show-page"><a href="/farms/<%= farm.id %>">Cancel</a></button>
+        <button class="btn btn-show-page" type="submit">Update</button>
+    </div>
+</form>

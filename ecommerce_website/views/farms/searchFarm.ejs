@@ -1,0 +1,35 @@
+<h2 class="section-title">Search Member</h2>
+<form action="/farms" method="GET">
+    <div class="farm-search-container">
+        <div class="farm-search">
+            <label>Farm Name</label>
+            <input type="text" name="name" value="<%= searchBar.name %>">
+        </div>
+
+        <div class="farm-search">
+            <label>Location</label>
+            <input type="text" name="location" value="<%= searchBar.location %>">
+        </div>
+
+        <div class="farm-search">
+            <label>Agricultural Produce</label>
+            <input type="text" name="produce" value="<%= searchBar.produce %>">
+        </div>
+    </div>
+    <div class="btn-container">
+        <button type="submit" class="btn btn-search">Search</button>
+    </div>
+</form>
+
+
+<div class="section-container">
+    <% farms.forEach(farm => { %>
+        <div class="item-frame">
+            <div class="item-title"><%= farm.name %></div>
+            <img class="farm-image" src="<%= farm.imagePath %>">
+            <div class="btn-container">
+                <button class="btn btn-view"><a href="/farms/<%= farm.id %>">View</a></button>
+            </div>
+        </div>
+    <% }) %>  
+</div>
