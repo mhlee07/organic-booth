@@ -6,18 +6,18 @@ if(document.readyState == 'loading'){
 
     function start(){
         const quantityInput = document.getElementsByClassName('quantity-input')
-        for( let i = 0; i < quantityInput.length; i++){
+        for(let i = 0; i < quantityInput.length; i++){
             let input = quantityInput[i]
             input.addEventListener('change', quantityChanged)
         }
 
         const deleteButton = document.getElementsByClassName('btn-delete')
-        for( let i = 0; i < deleteButton.length; i++){
+        for(let i = 0; i < deleteButton.length; i++){
             deleteButton[i].addEventListener('click', deleteCartItem)
         }
 
         const addToCartButton = document.getElementsByClassName('add-to-cart')
-        for( let i = 0; i < addToCartButton.length; i++){
+        for(let i = 0; i < addToCartButton.length; i++){
             addToCartButton[i].addEventListener('click', addtoCart)
         }
 
